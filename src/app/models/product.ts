@@ -8,7 +8,7 @@ export class Product {
     constructor(name:string, category:string, localization:string, price:number){
         this.name = name;
         this.category = category;
-        this.price = price;
         this.localization = localization;
+        this.price = price;
     }
 }

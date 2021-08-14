@@ -1,1 +1,45 @@
-<p>listar-producto works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">LISTADO DE PRODUCTOS</span>
+                    <button class="btn btn-success float-end" routerLink="/create">NUEVO</button><!--Con la directiva routerLink hacemos la redireccion segun lo que tengamos configurado en el modulo de rutas-->
+                    <table class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Ubicación</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Coca cola</td>
+                            <td>Bebida</td>
+                            <td>Buenos Aires</td>
+                            <td>2</td>
+                            <td>
+                                <i class="fas fa-trash text-primary"></i>
+                                <i class="fas fa-edit text-danger"></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Lays</td>
+                            <td>Patatas de bolsa</td>
+                            <td>España</td>
+                            <td>0.50</td>
+                            <td>
+                                <i class="fas fa-trash text-primary"></i>
+                                <i class="fas fa-edit text-danger"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
