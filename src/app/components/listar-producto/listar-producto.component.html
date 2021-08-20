@@ -16,21 +16,11 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>Coca cola</td>
-                            <td>Bebida</td>
-                            <td>Buenos Aires</td>
-                            <td>2</td>
-                            <td>
-                                <i class="fas fa-trash text-primary"></i>
-                                <i class="fas fa-edit text-danger"></i>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Lays</td>
-                            <td>Patatas de bolsa</td>
-                            <td>España</td>
-                            <td>0.50</td>
+                          <tr *ngFor = "let product of productList">
+                            <td>{{product.name}}</td>
+                            <td>{{product.category}}</td>
+                            <td>{{product.localization}}</td>
+                            <td>{{product.price + ' €'}}</td>
                             <td>
                                 <i class="fas fa-trash text-primary"></i>
                                 <i class="fas fa-edit text-danger"></i>
