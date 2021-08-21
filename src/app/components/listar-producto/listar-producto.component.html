@@ -5,29 +5,30 @@
                 <div class="card-body text-center">
                     <span class="titulo">LISTADO DE PRODUCTOS</span>
                     <button class="btn btn-success float-end" routerLink="/create">NUEVO</button><!--Con la directiva routerLink hacemos la redireccion segun lo que tengamos configurado en el modulo de rutas-->
-                    <table class="table table-striped mt-3">
-                        <thead>
-                          <tr>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Ubicación</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col"></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr *ngFor = "let product of productList">
-                            <td>{{product.name}}</td>
-                            <td>{{product.category}}</td>
-                            <td>{{product.localization}}</td>
-                            <td>{{product.price + ' €'}}</td>
-                            <td>
-                                <i class="fas fa-trash text-primary"></i>
-                                <i class="fas fa-edit text-danger"></i>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <table *ngIf = "productList.length > 0" class="table table-striped mt-3">
+                      <thead>
+                        <tr>
+                          <th scope="col">Producto</th>
+                          <th scope="col">Categoria</th>
+                          <th scope="col">Ubicación</th>
+                          <th scope="col">Precio</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor = "let product of productList">
+                          <td>{{product.name}}</td>
+                          <td>{{product.category}}</td>
+                          <td>{{product.localization}}</td>
+                          <td>{{product.price + ' €'}}</td>
+                          <td>
+                              <i (click)="deleteProduct(product._id)" class="fas fa-trash text-primary"></i>
+                              <i class="fas fa-edit text-danger"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h5 style="text-align: start" class="mt-10" *ngIf = "productList.length === 0" >No hay productos</h5>
                 </div>
             </div>
         </div>
