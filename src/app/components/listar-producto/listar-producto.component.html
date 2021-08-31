@@ -23,7 +23,7 @@
                           <td>{{product.price + ' €'}}</td>
                           <td>
                               <i (click)="deleteProduct(product._id)" class="fas fa-trash text-primary"></i>
-                              <i class="fas fa-edit text-danger"></i>
+                              <i [routerLink] = "['/edit', product._id]" class="fas fa-edit text-danger"></i>
                           </td>
                         </tr>
                       </tbody>
